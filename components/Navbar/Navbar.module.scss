@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: min(calc(100% - 9rem), 2000px);
+  margin-inline: auto;
+  padding-block: 4.5rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li + li {
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 1rem;
+  }
+}

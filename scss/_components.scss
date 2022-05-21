@@ -1,0 +1,35 @@
+.btn,
+.btn-g {
+  padding: 1rem 2rem;
+
+  border-radius: 10px;
+  border: none;
+
+  background-color: var(--clr);
+  color: var(--txt-c);
+}
+
+.btn-g {
+  background-color: var(--bg);
+  color: var(--clr);
+
+  border: 1px solid var(--clr-a);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  display: inline-block;
+}
+
+@media (hover: hover) {
+  .btn:hover,
+  .btn-g:hover {
+    filter: brightness(0.9);
+  }
+
+  a:hover:not(.btn, .btn-g) {
+    text-decoration: underline;
+  }
+}

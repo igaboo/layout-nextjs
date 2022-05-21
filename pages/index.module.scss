@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  min-height: 100vh;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  h1 {
+    max-width: 530px;
+
+    margin-bottom: 27px;
+  }
+
+  a + a {
+    margin-left: 27px;
+  }
+}
+
+.hero {
+  width: min(calc(100% - 9rem), 1700px);
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10rem;
+
+  a svg {
+    margin-right: 1rem;
+  }
+}
