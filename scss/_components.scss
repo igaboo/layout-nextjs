@@ -1,4 +1,13 @@
 .btn,
+.btn-g,
+.btn-s {
+  cursor: pointer;
+  user-select: none;
+
+  transition: all 200ms ease;
+}
+
+.btn,
 .btn-g {
   padding: 1rem 2rem;
 
@@ -16,6 +25,35 @@
   border: 1px solid var(--clr-a);
 }
 
+.btn-s {
+  padding: 1rem;
+
+  background-color: var(--bg);
+  color: var(--txt);
+  border: 1px solid var(--clr-a);
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-align: left;
+  gap: 1rem;
+  align-items: center;
+
+  svg {
+    color: var(--clr);
+  }
+}
+
+.btn-s.active {
+  background-color: var(--clr);
+  color: var(--txt-c);
+  border: 1px solid var(--clr);
+
+  svg {
+    color: var(--clr-a);
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -25,7 +63,8 @@ a {
 
 @media (hover: hover) {
   .btn:hover,
-  .btn-g:hover {
+  .btn-g:hover,
+  .btn-s:hover {
     filter: brightness(0.9);
   }
 

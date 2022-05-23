@@ -1,15 +1,27 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import Logo from "../Logo";
+import { Logo } from "../Svg";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Navbar.module.scss";
 
 function Navbar() {
   return (
     <header className={styles.container}>
-      <div className={styles.logo}>
-        <Logo />
-        <h2>Layout</h2>
-      </div>
+      <Link href="/">
+        <a>
+          <div className={styles.logo}>
+            <Logo />
+            <h2>Layout</h2>
+          </div>
+        </a>
+      </Link>
+
       <ul>
+        <li>
+          <h5>
+            <FontAwesomeIcon icon={faBars} />
+          </h5>
+        </li>
         <li>
           <Link href="/examples">
             <a>

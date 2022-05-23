@@ -54,3 +54,25 @@ p {
   font-size: 20px;
   font-weight: 500;
 }
+
+.btn-s {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: var(--clr-a);
+  z-index: -1;
+}

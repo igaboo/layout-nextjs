@@ -7,9 +7,19 @@
   margin-inline: auto;
   padding-block: 4.5rem;
 
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  background-color: var(--bg-o);
+
   ul {
     display: flex;
     align-items: center;
+
+    li:first-of-type {
+      display: none;
+    }
 
     li + li {
       margin-left: 2.5rem;
@@ -23,5 +33,26 @@
 
   svg {
     margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container ul li:first-of-type {
+    display: block;
+  }
+
+  .container ul li:not(:first-of-type, :last-of-type) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: min(calc(100% - 2rem), 2000px);
+    padding-block: 1rem;
+  }
+
+  .container ul li:last-of-type {
+    display: none;
   }
 }

@@ -1,3 +1,4 @@
+import DisplayTypesExample from "../components/DisplayTypesExample/DisplayTypesExample";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
@@ -16,7 +17,10 @@ export default function Home() {
       <Navbar />
       <div className={styles.hero}>
         <div className={styles.col}>
-          <h1>Display your photos anyway you want.</h1>
+          <h1>
+            Display <span className="highlight">your</span> photos the way{" "}
+            <span className="highlight">you</span> want.
+          </h1>
           <Link href="/" className="btn">
             <a className="btn">Create your own</a>
           </Link>
@@ -27,7 +31,9 @@ export default function Home() {
             </a>
           </Link>
         </div>
-        <div className={styles.col}></div>
+        <div className={styles.col}>
+          <DisplayTypesExample />
+        </div>
       </div>
     </div>
   );

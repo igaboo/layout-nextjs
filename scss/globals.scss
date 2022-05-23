@@ -2,3 +2,22 @@
 @use "./type";
 @use "./components";
 @use "./variables";
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  height: 630px;
+
+  min-width: 678px;
+}
+
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+@media screen and (max-width: 1600px) {
+  .my-masonry-grid {
+    min-width: 0;
+  }
+}

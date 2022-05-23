@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+
+  a {
+    width: fit-content;
+    margin-inline: auto;
+
+    margin-top: 2rem;
+  }
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
