@@ -15,7 +15,7 @@ export default function DisplayTypesExample() {
 
   const [radius, setRadius] = useState(20);
   const [padding, setPadding] = useState(16);
-  const [size, setSize] = useState(200);
+  const [size, setSize] = useState(null);
 
   return (
     <div className={styles.container}>
@@ -81,7 +81,7 @@ export default function DisplayTypesExample() {
             name="size"
             type="range"
             min="50"
-            max="200"
+            max="250"
             step="0.01"
             defaultValue={size}
             onChange={(e) => setSize(e.target.value)}
