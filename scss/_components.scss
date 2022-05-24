@@ -6,7 +6,7 @@ input[type="range"]:focus {
 }
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 16px;
+  height: 8px;
   cursor: pointer;
   background: var(--clr-o);
   border-radius: 1rem;
@@ -20,6 +20,8 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--clr);
   cursor: pointer;
   -webkit-appearance: none;
+
+  margin-top: -4px;
 
   transition: outline 200ms ease;
 
@@ -60,7 +62,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .btn-s {
-  padding: 1rem;
+  padding: 0.5rem;
 
   background-color: var(--bg);
   color: var(--txt);
@@ -70,8 +72,10 @@ input[type="range"]::-webkit-slider-thumb {
   display: grid;
   grid-template-columns: auto 1fr;
   text-align: left;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
+
+  font-size: 18px;
 
   svg {
     color: var(--clr);
@@ -92,10 +96,12 @@ input[type="range"]::-webkit-slider-thumb {
   border: 1px solid var(--clr-a);
   border-radius: 10px;
 
-  padding: 1rem;
+  padding: 0.5rem;
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
+
+    font-size: 14px;
 
     color: var(--txt-clr);
   }
