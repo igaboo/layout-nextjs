@@ -15,10 +15,6 @@
 
     margin-bottom: 27px;
   }
-
-  a + a {
-    margin-left: 27px;
-  }
 }
 
 .hero {
@@ -27,50 +23,47 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-
-  margin-bottom: 10rem;
 
   a svg {
     margin-right: 1rem;
   }
+
+  .col:first-of-type {
+    height: calc(100vh - 20rem);
+
+    position: sticky;
+    top: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 27px;
+  row-gap: 10px;
 }
 
 @media screen and (max-width: 1600px) {
   .hero {
-    text-align: center;
-
     display: grid;
     grid-template-columns: 1fr;
-
-    h1 {
-      margin-inline: auto;
-    }
 
     .col:first-of-type {
       margin-bottom: 7rem;
       margin-top: 3rem;
+
+      height: auto;
+      position: static;
     }
   }
 }
 
 @media screen and (max-width: 900px) {
-  .container a + a {
-    margin-inline: auto;
-    margin-top: 1rem;
-  }
-
-  .container a {
-    display: block;
-    width: fit-content;
-    margin-inline: auto;
-  }
-
   .hero {
     width: min(calc(100% - 2rem), 1700px);
-
-    .col:first-of-type {
-      margin-block: 10rem;
-    }
   }
 }

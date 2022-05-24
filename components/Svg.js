@@ -1,4 +1,4 @@
-export function Logo() {
+export function Logo({ fill }) {
   return (
     <svg
       id="Layer_1"
@@ -7,6 +7,7 @@ export function Logo() {
       width="36"
       height="36"
       viewBox="0 0 36 36"
+      fill={fill && fill}
     >
       <defs>
         <linearGradient
@@ -27,7 +28,7 @@ export function Logo() {
         width="11.067"
         height="36"
         rx="5.534"
-        fill="url(#linear-gradient)"
+        fill={!fill ? "url(#linear-gradient)" : ""}
       />
       <rect
         id="Rectangle_134"
@@ -36,7 +37,7 @@ export function Logo() {
         height="20.411"
         rx="5.534"
         transform="translate(24.933 15.589)"
-        fill="url(#linear-gradient)"
+        fill={!fill ? "url(#linear-gradient)" : ""}
       />
       <rect
         id="Rectangle_135"
@@ -45,7 +46,7 @@ export function Logo() {
         height="16.411"
         rx="5.534"
         transform="translate(12.466 19.589)"
-        fill="url(#linear-gradient)"
+        fill={!fill ? "url(#linear-gradient)" : ""}
       />
     </svg>
   );

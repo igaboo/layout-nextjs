@@ -1,17 +1,20 @@
+.bg {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  background-color: var(--bg-o);
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: min(calc(100% - 9rem), 2000px);
+  height: 12rem;
   margin-inline: auto;
   padding-block: 4.5rem;
-
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  background-color: var(--bg-o);
 
   ul {
     display: flex;
@@ -50,6 +53,8 @@
   .container {
     width: min(calc(100% - 2rem), 2000px);
     padding-block: 1rem;
+
+    height: auto;
   }
 
   .container ul li:last-of-type {
