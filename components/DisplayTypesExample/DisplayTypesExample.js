@@ -15,7 +15,7 @@ export default function DisplayTypesExample() {
 
   const [radius, setRadius] = useState(20);
   const [padding, setPadding] = useState(16);
-  const [size, setSize] = useState(null);
+  // const [size, setSize] = useState(null);
 
   return (
     <div className={styles.container}>
@@ -74,7 +74,7 @@ export default function DisplayTypesExample() {
             onChange={(e) => setPadding(e.target.value)}
           />
         </div>
-        <div className="btn-slider">
+        {/* <div className="btn-slider">
           <p>Image Size</p>
           <input
             id="size"
@@ -86,14 +86,14 @@ export default function DisplayTypesExample() {
             defaultValue={size}
             onChange={(e) => setSize(e.target.value)}
           />
-        </div>
+        </div> */}
       </div>
 
       <Display
         display={display}
         radius={radius}
         padding={padding}
-        size={size}
+        // size={size}
       />
     </div>
   );
@@ -143,13 +143,13 @@ function Display({ display, radius, padding, size }) {
     }
   }, [padding, display]);
 
-  useEffect(() => {
-    if (size === null) return;
-    const images = Array.from(document.getElementsByClassName("box"));
-    images.forEach((image) => {
-      image.style.backgroundSize = `${size}%`;
-    });
-  }, [size, display]);
+  // useEffect(() => {
+  //   if (size === null) return;
+  //   const images = Array.from(document.getElementsByClassName("box"));
+  //   images.forEach((image) => {
+  //     image.style.backgroundSize = `${size}%`;
+  //   });
+  // }, [size, display]);
 
   let boxes = [
     {
