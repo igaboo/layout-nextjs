@@ -36,7 +36,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .btn,
 .btn-g,
-.btn-s {
+.btn-s,
+.btn-i {
   cursor: pointer;
   user-select: none;
 
@@ -92,6 +93,27 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+.btn-i {
+  padding: 1.5rem;
+
+  border-radius: 10px;
+  border: none;
+
+  width: 100%;
+  text-align: center;
+
+  font-weight: 600;
+
+  background-color: var(--clr);
+  color: var(--txt-c);
+
+  svg {
+    margin-left: 0.5rem;
+
+    transition: transform 200ms ease;
+  }
+}
+
 .btn-slider {
   border: 1px solid var(--clr-a);
   border-radius: 10px;
@@ -117,8 +139,13 @@ a {
 @media (hover: hover) {
   .btn:hover,
   .btn-g:hover,
-  .btn-s:hover {
+  .btn-s:hover,
+  .btn-i:hover {
     filter: brightness(0.9);
+  }
+
+  .btn-i:hover svg {
+    transform: translate(5px);
   }
 
   a:hover:not(.btn, .btn-g) {
