@@ -17,7 +17,7 @@ export default function Home() {
             <span className="highlight">you</span> want.
           </h1>
           <div className={styles.buttons}>
-            <Link href="/" className="btn">
+            <Link href="/signup" className="btn">
               <a className="btn">Create your own</a>
             </Link>
             <Link href="/" className="sub-btn">

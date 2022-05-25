@@ -22,7 +22,8 @@
   margin-inline: auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
+  column-gap: 3rem;
 
   a svg {
     margin-right: 1rem;
