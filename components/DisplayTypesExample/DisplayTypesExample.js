@@ -15,11 +15,14 @@ export default function DisplayTypesExample() {
 
   const [radius, setRadius] = useState(20);
   const [padding, setPadding] = useState(16);
-  // const [size, setSize] = useState(null);
+  const [border, setBorder] = useState(0);
 
   return (
     <div className={styles.container}>
       <div className={styles.buttons}>
+        {/* <div className={styles.tooltip}>
+          <p>Try some of the different display types you can use!</p>
+        </div> */}
         <button
           onClick={() => setDisplay("Masonry")}
           className={`btn-s ${display === "Masonry" && "active"}`}
@@ -68,38 +71,38 @@ export default function DisplayTypesExample() {
             name="padding"
             type="range"
             min="4"
-            max="16"
+            max="30"
             step="0.01"
             defaultValue={padding}
             onChange={(e) => setPadding(e.target.value)}
           />
         </div>
-        {/* <div className="btn-slider">
-          <p>Image Size</p>
+        <div className="btn-slider">
+          <p>Image Border</p>
           <input
-            id="size"
-            name="size"
+            id="border"
+            name="border"
             type="range"
-            min="50"
-            max="250"
+            min="0"
+            max="20"
             step="0.01"
-            defaultValue={size}
-            onChange={(e) => setSize(e.target.value)}
+            defaultValue={border}
+            onChange={(e) => setBorder(e.target.value)}
           />
-        </div> */}
+        </div>
       </div>
 
       <Display
         display={display}
         radius={radius}
         padding={padding}
-        // size={size}
+        border={border}
       />
     </div>
   );
 }
 
-function Display({ display, radius, padding, size }) {
+function Display({ display, radius, padding, border }) {
   const controls = useAnimation();
 
   const variants = {
@@ -143,13 +146,12 @@ function Display({ display, radius, padding, size }) {
     }
   }, [padding, display]);
 
-  // useEffect(() => {
-  //   if (size === null) return;
-  //   const images = Array.from(document.getElementsByClassName("box"));
-  //   images.forEach((image) => {
-  //     image.style.backgroundSize = `${size}%`;
-  //   });
-  // }, [size, display]);
+  useEffect(() => {
+    const images = Array.from(document.getElementsByClassName("box"));
+    images.forEach((image) => {
+      image.style.border = `${border}px solid var(--clr-a)`;
+    });
+  }, [border, display]);
 
   let boxes = [
     {

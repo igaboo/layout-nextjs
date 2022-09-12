@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--clr-a);
+
+  min-height: 100vh;
+
+  header,
+  footer {
+    padding: 1rem;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    width: calc(100% - 1rem);
+
+    border: none;
+    border-top: 1px solid var(--clr-a);
+  }
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  font-size: 2rem;
+
+  padding: 1rem;
+  margin-inline: auto;
+
+  color: var(--clr-d);
+
+  transition: all 200ms ease;
+
+  display: flex;
+  justify-content: center;
+}
+
+.button.active {
+  background-color: var(--clr-a);
+  color: var(--clr);
+}
+
+@media (hover: hover) {
+  .button:hover:not(.active) {
+    color: var(--clr);
+  }
+}

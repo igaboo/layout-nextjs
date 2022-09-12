@@ -1,0 +1,26 @@
+.container {
+  width: min(calc(100% - 2rem), 1200px);
+  margin-inline: auto;
+
+  margin-top: 10rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.subContainer {
+  margin-top: 5rem;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 2.5rem;
+
+    span {
+      color: var(--txt-a);
+    }
+  }
+}

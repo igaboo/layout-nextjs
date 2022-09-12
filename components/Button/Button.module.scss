@@ -1,0 +1,45 @@
+.container {
+  border-radius: 10px;
+  border: 1px solid var(--bg-d);
+
+  height: 100%;
+
+  // overflow: hidden;
+
+  button {
+    cursor: pointer;
+    border: none;
+
+    padding-inline: 0.5rem;
+
+    height: 100%;
+
+    border-radius: 7px;
+
+    background-color: transparent;
+    color: var(--clr);
+
+    transition: all 200ms ease;
+  }
+
+  button:not(:first-of-type) {
+    border-left: 1px solid var(--bg-d);
+  }
+
+  svg {
+    width: 20px;
+
+    color: inherit;
+  }
+}
+
+.active {
+  background-color: var(--clr) !important;
+  color: var(--txt-c) !important;
+}
+
+@media (hover: hover) {
+  .container button:hover {
+    background-color: var(--clr-a);
+  }
+}

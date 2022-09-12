@@ -183,3 +183,86 @@ export function MetroDisplay() {
     </svg>
   );
 }
+
+export function Gallery() {
+  return (
+    <svg
+      id="Layer_2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="currentColor"
+    >
+      <g id="Layer_1-2">
+        <g>
+          <rect y="281.27" width="230.73" height="230.73" rx="20" ry="20" />
+          <rect
+            x="281.27"
+            y="281.27"
+            width="230.73"
+            height="230.73"
+            rx="20"
+            ry="20"
+          />
+          <rect width="230.73" height="230.73" rx="20" ry="20" />
+          <rect x="281.27" width="230.73" height="230.73" rx="20" ry="20" />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function Minimal() {
+  return (
+    <svg
+      id="Layer_2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 514.13 512.13"
+      fill="currentColor"
+    >
+      <g id="Layer_1-2">
+        <g>
+          <rect
+            x="283.4"
+            y="281.4"
+            width="230.73"
+            height="230.73"
+            rx="20"
+            ry="20"
+          />
+          <rect
+            x="281.27"
+            y=".13"
+            width="230.73"
+            height="230.73"
+            rx="20"
+            ry="20"
+          />
+          <rect width="228.41" height="88.13" rx="20" ry="20" />
+          <rect y="141.21" width="228.41" height="88.13" rx="20" ry="20" />
+          <rect y="282.41" width="228.41" height="88.13" rx="20" ry="20" />
+          <rect y="423.62" width="228.41" height="88.13" rx="20" ry="20" />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function List() {
+  return (
+    <svg
+      id="Layer_2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 511.74"
+      fill="currentColor"
+    >
+      <g id="Layer_1-2">
+        <g>
+          <rect width="512" height="88.13" rx="20" ry="20" />
+          <rect y="141.21" width="512" height="88.13" rx="20" ry="20" />
+          <rect y="282.41" width="512" height="88.13" rx="20" ry="20" />
+          <rect y="423.62" width="512" height="88.13" rx="20" ry="20" />
+        </g>
+      </g>
+    </svg>
+  );
+}

@@ -39,12 +39,29 @@
   }
 }
 
+.logout button {
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+
+  background-color: transparent;
+
+  transition: filter 200ms ease;
+}
+
+@media (hover: hover) {
+  .logout button:hover {
+    filter: brightness(0.8);
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .container ul li:first-of-type {
     display: block;
   }
 
-  .container ul li:not(:first-of-type, :last-of-type) {
+  .container ul li:not(:first-of-type, :last-of-type, .logout) {
     display: none;
   }
 }
@@ -57,7 +74,8 @@
     height: auto;
   }
 
-  .container ul li:last-of-type {
+  .container ul li:last-of-type,
+  .logout {
     display: none;
   }
 }

@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar/Navbar";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import styles from "./index.module.scss";
 
-export default function Home() {
+export default function Index() {
   return (
     <div className={styles.container}>
       <Navbar />

@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+
+  p {
+    color: var(--txt-c);
+  }
+}
+
+.right,
+.left,
+.top,
+.bottom {
+  user-select: none;
+
+  opacity: 0;
+
+  position: absolute;
+
+  background-color: var(--clr);
+  color: var(--txt-c);
+  border-radius: 5px;
+
+  padding: 0.5rem;
+
+  display: flex;
+
+  height: fit-content;
+  margin-block: auto;
+
+  transition: all 200ms ease;
+}
+
+.right {
+  top: 0;
+  left: 100%;
+  bottom: 0;
+
+  transform-origin: 0 50%;
+}
+
+.bottom {
+  top: 100%;
+  width: fit-content;
+  margin-top: 0.5rem;
+  left: 50%;
+
+  transform: translate(-50%);
+
+  transform-origin: 50% 0;
+}
+
+.hover:hover + .right,
+.hover:hover + .left {
+  left: 110%;
+  opacity: 1;
+}
+
+.hover:hover + .top,
+.hover:hover + .bottom {
+  top: 110%;
+  opacity: 1;
+}

@@ -45,6 +45,16 @@
   top: 12rem;
 }
 
+.tooltip {
+  max-width: 10rem;
+
+  background-color: var(--clr);
+  color: var(--txt-c);
+
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 .box {
   margin-bottom: 1rem;
 

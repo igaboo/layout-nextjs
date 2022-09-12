@@ -3,21 +3,22 @@
 @use "./components";
 @use "./variables";
 
+.dashboard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
 .my-masonry-grid {
   display: flex;
-  // margin-left: -1rem; /* gutter size offset */
-
-  // min-width: 678px;
 }
 
 .my-masonry-grid_column {
-  padding-left: 1rem; /* gutter size */
+  padding-left: 1rem;
   background-clip: padding-box;
 }
 
 @media screen and (max-width: 1600px) {
   .my-masonry-grid {
     min-width: 0;
-    // margin-left: 0;
   }
 }

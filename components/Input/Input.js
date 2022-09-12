@@ -1,11 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Input.module.scss";
-import { useState } from "react";
 
-export default function Input({ placeholder, icon, type }) {
-  const [value, setValue] = useState("");
-
+export default function Input({ placeholder, icon, type, value, setValue }) {
   return (
     <>
       <div
